@@ -1,0 +1,72 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/AI4S2S/lilio:
+      branch: main
+      repo: https://github.com/AI4S2S/lilio
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.8
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/AI4S2S/lilio git:
+        commands:
+        - /usr/bin/env sh .sqa/script.lumpy-magenta-armadillo.sh
+        container: qc.acc_ready-amethyst-dachshund
+  QC.Doc:
+    repos:
+      github.com/AI4S2S/lilio find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.shabby-cerise-newfoundland.sh
+        container: qc.doc_shabby-ochre-orangutan
+      github.com/AI4S2S/lilio git:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleepy-tan-quail.sh
+        container: qc.doc_sleepy-white-rhinoceros
+      github.com/AI4S2S/lilio markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.slaphappy-cyan-lynx.sh
+        container: qc.doc_geeky-cornflower-turkey
+      github.com/AI4S2S/lilio restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.stealthy-aquamarine-numbat.sh
+        container: qc.doc_foggy-aqua-bee
+  QC.Lic:
+    repos:
+      github.com/AI4S2S/lilio licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.skinny-tomato-earwig.sh
+        container: qc.lic_stealthy-aquamarine-capuchin
+  QC.Met:
+    repos:
+      github.com/AI4S2S/lilio cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.ugly-olivine-civet.sh
+        container: qc.met_snappy-coral-gopher
+  QC.Sec:
+    repos:
+      github.com/AI4S2S/lilio bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.thirsty-emerald-chow.sh
+        container: qc.sec_blurry-cerulean-eleuth
+  QC.Sty:
+    repos:
+      github.com/AI4S2S/lilio flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.nerdy-flax-dugong.sh
+        container: qc.sty_bumpy-brown-swan
+      github.com/AI4S2S/lilio jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.lousy-pink-zonkey.sh
+        container: qc.sty_dorky-wheat-dragon
+  QC.Ver:
+    repos:
+      github.com/AI4S2S/lilio get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.pokey-eggplant-rabbit.sh
+        container: qc.ver_cheeky-taupe-snail
+timeout: 5400
