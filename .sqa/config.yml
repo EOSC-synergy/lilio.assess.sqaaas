@@ -15,58 +15,58 @@ sqa_criteria:
     repos:
       github.com/AI4S2S/lilio git:
         commands:
-        - /usr/bin/env sh .sqa/script.hilly-cornflower-anteater.sh
-        container: qc.acc_sunny-cerise-zebu
+        - /usr/bin/env sh .sqa/script.snappy-mustard-mule.sh
+        container: qc.acc_sleepy-ultramarine-indri
   QC.Doc:
     repos:
       github.com/AI4S2S/lilio find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.shaggy-ultramarine-eagle.sh
-        container: qc.doc_nippy-periwinkle-ferret
+        - /usr/bin/env sh .sqa/script.homey-dandelion-antelope.sh
+        container: qc.doc_seedy-scarlet-chameleon
       github.com/AI4S2S/lilio git:
         commands:
-        - /usr/bin/env sh .sqa/script.seedy-black-beaver.sh
-        container: qc.doc_sleepy-wisteria-havanese
+        - /usr/bin/env sh .sqa/script.surly-xanthic-saola.sh
+        container: qc.doc_freaky-olive-cattle
       github.com/AI4S2S/lilio markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.cloudy-violet-chihuahua.sh
-        container: qc.doc_tasty-peach-yak
+        - /usr/bin/env sh .sqa/script.flaky-sepia-grasshopper.sh
+        container: qc.doc_boozy-magnolia-lionfish
       github.com/AI4S2S/lilio restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.squirrely-saffron-dalmatian.sh
-        container: qc.doc_freaky-gold-beaver
+        - /usr/bin/env sh .sqa/script.skimpy-white-chin.sh
+        container: qc.doc_blurry-plum-tuatara
   QC.Lic:
     repos:
       github.com/AI4S2S/lilio licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.surly-lilac-macaque.sh
-        container: qc.lic_seedy-cobalt-squirt
+        - /usr/bin/env sh .sqa/script.skimpy-salmon-wasp.sh
+        container: qc.lic_thirsty-aquamarine-dugong
   QC.Met:
     repos:
       github.com/AI4S2S/lilio cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.foggy-denim-antelope.sh
-        container: qc.met_woolly-linen-worm
+        - /usr/bin/env sh .sqa/script.goopy-teal-dugong.sh
+        container: qc.met_surly-chartreuse-slug
   QC.Sec:
     repos:
       github.com/AI4S2S/lilio bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.stinky-puce-budgerigar.sh
-        container: qc.sec_grumpy-green-wallaby
+        - /usr/bin/env sh .sqa/script.craggy-cinnabar-camel.sh
+        container: qc.sec_fuzzy-emerald-squirrel
   QC.Sty:
     repos:
       github.com/AI4S2S/lilio flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.snazzy-chocolate-dunker.sh
-        container: qc.sty_lovely-beige-anteater
+        - /usr/bin/env sh .sqa/script.goopy-black-bandicoot.sh
+        container: qc.sty_pasty-cinnamon-lion
       github.com/AI4S2S/lilio jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.craggy-vermilion-balinese.sh
-        container: qc.sty_stinky-violet-chipmunk
+        - /usr/bin/env sh .sqa/script.homey-rose-rattlesnake.sh
+        container: qc.sty_crabby-orchid-monster
   QC.Ver:
     repos:
       github.com/AI4S2S/lilio get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.muzzy-amber-lizard.sh
-        container: qc.ver_lumpy-crimson-burmese
+        - /usr/bin/env sh .sqa/script.bumpy-orange-sparrow.sh
+        container: qc.ver_squirrely-black-llama
 timeout: 5400
